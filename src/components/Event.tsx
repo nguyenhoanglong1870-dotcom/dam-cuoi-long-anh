@@ -127,10 +127,10 @@ export default function Event() {
                     href={event.mapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-2xl bg-[#9F3A4B] px-5 py-3 text-base font-semibold text-white shadow-md shadow-[#9F3A4B]/20 transition hover:bg-[#872E3E] active:scale-[0.98]"
+                    className="inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-2xl bg-[#233D31] px-5 py-3 text-base font-semibold text-white shadow-md shadow-[#233D31]/25 transition hover:bg-[#1A2E25] active:scale-[0.98]"
                   >
-                    <MapPin className="h-5 w-5" />
-                    <span>Mở Google Maps</span>
+                    <MapPin className="h-5 w-5 text-[#E5C992]" />
+                    <span>Mở Google Maps chỉ đường</span>
                     <ExternalLink className="h-4 w-4 opacity-85" />
                   </a>
                 </div>
