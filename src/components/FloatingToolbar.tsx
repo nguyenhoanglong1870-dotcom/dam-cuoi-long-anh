@@ -1,12 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import {
   Calendar,
   Gift,
   Heart,
   MapPin,
-  Menu,
   MessageSquareHeart,
   Pause,
   Play,
@@ -37,7 +37,6 @@ export default function FloatingToolbar({
     }
 
     const scrollStep = () => {
-      // Dừng lại nếu đã cuộn tới cuối trang
       if (
         window.innerHeight + window.scrollY >=
         document.documentElement.scrollHeight - 10
@@ -51,7 +50,6 @@ export default function FloatingToolbar({
 
     autoScrollRafRef.current = requestAnimationFrame(scrollStep);
 
-    // Tạm dừng tự động cuộn nếu khách chủ động chạm hoặc cuộn tay
     const handleUserTouch = () => {
       setIsAutoScrolling(false);
     };
@@ -81,47 +79,47 @@ export default function FloatingToolbar({
 
   return (
     <>
-      {/* Top Floating Equalizer Audio Pill (Phong cách NgayChungDoi) */}
-      <div className="fixed top-4 right-4 z-40 sm:top-5 sm:right-6">
+      {/* Top Floating Equalizer Audio Pill */}
+      <div className="fixed top-3.5 right-3.5 z-40 sm:top-4 sm:right-6">
         <button
           type="button"
           onClick={onToggleMusic}
           aria-label={isPlaying ? "Tạm dừng nhạc nền" : "Phát nhạc nền"}
-          className="inline-flex items-center gap-2 rounded-full border border-[#C69C6D]/45 bg-white/95 px-3.5 py-1.5 text-xs font-medium text-[#233D31] shadow-md backdrop-blur-md transition hover:bg-white active:scale-95"
+          className="inline-flex items-center gap-1.5 rounded-full border border-[#DFCBB5] bg-white/90 px-3 py-1.5 text-[11px] font-medium text-[#2C4134] shadow-sm backdrop-blur-md transition hover:bg-white active:scale-95"
         >
           {isPlaying ? (
             <>
               {/* Equalizer animation bars */}
-              <span className="flex items-end gap-0.5 h-3.5 w-3.5 text-[#233D31]">
-                <span className="w-1 bg-[#233D31] rounded-full animate-[eq-bar_0.8s_ease-in-out_infinite]" />
-                <span className="w-1 bg-[#233D31] rounded-full animate-[eq-bar_0.8s_ease-in-out_0.2s_infinite]" />
-                <span className="w-1 bg-[#233D31] rounded-full animate-[eq-bar_0.8s_ease-in-out_0.4s_infinite]" />
+              <span className="flex items-end gap-0.5 h-3 w-3 text-[#2C4134]">
+                <span className="w-0.5 bg-[#2C4134] rounded-full animate-[eq-bar_0.8s_ease-in-out_infinite]" />
+                <span className="w-0.5 bg-[#2C4134] rounded-full animate-[eq-bar_0.8s_ease-in-out_0.2s_infinite]" />
+                <span className="w-0.5 bg-[#2C4134] rounded-full animate-[eq-bar_0.8s_ease-in-out_0.4s_infinite]" />
               </span>
-              <span className="hidden sm:inline">Tạm dừng nhạc</span>
+              <span>Tạm dừng</span>
             </>
           ) : (
             <>
-              <VolumeX className="h-3.5 w-3.5 text-[#9A7A80]" />
-              <span className="hidden sm:inline">Bật nhạc</span>
+              <VolumeX className="h-3 w-3 text-[#7A9184]" />
+              <span>Bật nhạc</span>
             </>
           )}
         </button>
       </div>
 
       {/* Bottom Floating Navigation Toolbar & FAB */}
-      <div className="fixed bottom-5 right-4 z-40 flex flex-col items-end gap-2.5 sm:bottom-6 sm:right-6">
+      <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 w-full max-w-[420px] px-3 pointer-events-none flex flex-col items-center gap-2">
         {/* Expanded Navigation Menu */}
         {isOpenMenu && (
-          <div className="animate-lightbox-zoom mb-2 flex w-52 flex-col gap-1.5 rounded-2xl border border-[#C69C6D]/45 bg-white/95 p-2 shadow-2xl backdrop-blur-md text-xs font-semibold text-[#233D31]">
+          <div className="pointer-events-auto mb-1 flex w-full max-w-[280px] flex-col gap-1 rounded-2xl border border-[#DFCBB5] bg-white/95 p-2 shadow-xl backdrop-blur-md text-xs font-semibold text-[#2C4134] animate-lightbox-zoom">
             <button
               type="button"
               onClick={onToggleMusic}
-              className="flex items-center gap-2.5 rounded-xl px-3 py-2 text-left transition hover:bg-[#FCEEF0]/60"
+              className="flex items-center gap-2 rounded-xl px-3 py-2 text-left transition hover:bg-[#F4F8F5]"
             >
               {isPlaying ? (
-                <Volume2 className="h-4 w-4 text-[#9F3A4B]" />
+                <Volume2 className="h-4 w-4 text-[#A34857]" />
               ) : (
-                <VolumeX className="h-4 w-4 text-[#9A7A80]" />
+                <VolumeX className="h-4 w-4 text-[#7A9184]" />
               )}
               <span>{isPlaying ? "Tắt âm thanh" : "Bật âm thanh"}</span>
             </button>
@@ -129,54 +127,54 @@ export default function FloatingToolbar({
             <button
               type="button"
               onClick={toggleAutoScroll}
-              className="flex items-center gap-2.5 rounded-xl px-3 py-2 text-left transition hover:bg-[#FCEEF0]/60"
+              className="flex items-center gap-2 rounded-xl px-3 py-2 text-left transition hover:bg-[#F4F8F5]"
             >
               {isAutoScrolling ? (
                 <>
-                  <Pause className="h-4 w-4 text-[#9F3A4B]" />
+                  <Pause className="h-4 w-4 text-[#A34857]" />
                   <span>Dừng tự động cuộn</span>
                 </>
               ) : (
                 <>
-                  <Play className="h-4 w-4 text-[#233D31]" />
+                  <Play className="h-4 w-4 text-[#2C4134]" />
                   <span>Bật tự động cuộn</span>
                 </>
               )}
             </button>
 
-            <div className="my-1 border-t border-[#F0E1D4]" />
+            <div className="my-0.5 border-t border-[#F0EAE1]" />
 
             <button
               type="button"
               onClick={() => scrollToSection("events")}
-              className="flex items-center gap-2.5 rounded-xl px-3 py-2 text-left transition hover:bg-[#FCEEF0]/60"
+              className="flex items-center gap-2 rounded-xl px-3 py-2 text-left transition hover:bg-[#F4F8F5]"
             >
-              <MapPin className="h-4 w-4 text-[#C69C6D]" />
+              <MapPin className="h-4 w-4 text-[#C5A059]" />
               <span>Thời gian &amp; Địa điểm</span>
             </button>
 
             <button
               type="button"
               onClick={() => scrollToSection("timeline")}
-              className="flex items-center gap-2.5 rounded-xl px-3 py-2 text-left transition hover:bg-[#FCEEF0]/60"
+              className="flex items-center gap-2 rounded-xl px-3 py-2 text-left transition hover:bg-[#F4F8F5]"
             >
-              <Calendar className="h-4 w-4 text-[#C69C6D]" />
+              <Calendar className="h-4 w-4 text-[#C5A059]" />
               <span>Lịch trình ngày cưới</span>
             </button>
 
             <button
               type="button"
               onClick={() => scrollToSection("gift-box")}
-              className="flex items-center gap-2.5 rounded-xl px-3 py-2 text-left transition hover:bg-[#FCEEF0]/60"
+              className="flex items-center gap-2 rounded-xl px-3 py-2 text-left transition hover:bg-[#F4F8F5]"
             >
-              <Gift className="h-4 w-4 text-[#C69C6D]" />
+              <Gift className="h-4 w-4 text-[#C5A059]" />
               <span>Mừng cưới / Quét QR</span>
             </button>
 
             <button
               type="button"
               onClick={() => scrollToSection("rsvp")}
-              className="flex items-center gap-2.5 rounded-xl px-3 py-2 text-left transition hover:bg-[#FCEEF0]/60 text-[#9F3A4B]"
+              className="flex items-center gap-2 rounded-xl px-3 py-2 text-left transition hover:bg-[#F4F8F5] text-[#A34857]"
             >
               <MessageSquareHeart className="h-4 w-4" />
               <span>Xác nhận tham dự (RSVP)</span>
@@ -184,24 +182,58 @@ export default function FloatingToolbar({
           </div>
         )}
 
-        {/* Main Floating Action Button (FAB) */}
-        <button
-          type="button"
-          onClick={() => setIsOpenMenu((prev) => !prev)}
-          aria-label={isOpenMenu ? "Đóng thanh công cụ" : "Mở thanh công cụ"}
-          className="group relative flex h-13 w-13 items-center justify-center rounded-full border-2 border-[#C69C6D] bg-[#233D31] text-white shadow-xl transition-transform hover:scale-105 active:scale-95"
-        >
-          {isOpenMenu ? (
-            <X className="h-5 w-5 text-white" />
-          ) : (
-            <div className="flex flex-col items-center justify-center">
-              <Heart className="h-4 w-4 fill-[#E5C992] text-[#E5C992]" />
-              <span className="text-[9px] font-bold tracking-widest text-white/90 uppercase">
-                Menu
-              </span>
-            </div>
-          )}
-        </button>
+        {/* Sleek Translucent Floating Bar (Chuẩn NgayChungDoi) */}
+        <div className="pointer-events-auto flex items-center justify-between gap-1 rounded-full border border-[#DFCBB5] bg-white/90 px-3 py-1.5 shadow-[0_8px_30px_rgba(0,0,0,0.12)] backdrop-blur-md w-full max-w-[340px]">
+          <button
+            type="button"
+            onClick={() => scrollToSection("rsvp")}
+            className="flex items-center gap-1 px-2.5 py-1 text-[11px] font-semibold text-[#2C4134] hover:text-[#1A2820] transition"
+          >
+            <MessageSquareHeart className="h-3.5 w-3.5 text-[#C5A059]" />
+            <span>Gửi lời chúc</span>
+          </button>
+
+          <span className="h-3 w-px bg-[#E2D8CC]" />
+
+          <button
+            type="button"
+            onClick={() => scrollToSection("gift-box")}
+            className="flex items-center gap-1 px-2.5 py-1 text-[11px] font-semibold text-[#2C4134] hover:text-[#1A2820] transition"
+          >
+            <Gift className="h-3.5 w-3.5 text-[#C5A059]" />
+            <span>Mừng cưới</span>
+          </button>
+
+          <span className="h-3 w-px bg-[#E2D8CC]" />
+
+          <button
+            type="button"
+            onClick={toggleAutoScroll}
+            aria-label={isAutoScrolling ? "Dừng tự động cuộn" : "Bật tự động cuộn"}
+            className="flex items-center gap-1 px-2 py-1 text-[11px] font-semibold text-[#2C4134] hover:text-[#1A2820] transition"
+          >
+            {isAutoScrolling ? (
+              <Pause className="h-3.5 w-3.5 text-[#A34857]" />
+            ) : (
+              <Play className="h-3.5 w-3.5 text-[#2C4134]" />
+            )}
+            <span className="hidden xs:inline">Cuộn</span>
+          </button>
+
+          {/* Avatar Menu Toggle Button */}
+          <button
+            type="button"
+            onClick={() => setIsOpenMenu((prev) => !prev)}
+            aria-label={isOpenMenu ? "Đóng thanh công cụ" : "Mở thanh công cụ"}
+            className="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#DFCBB5] bg-[#2C4134] text-white shadow-sm overflow-hidden transition hover:scale-105 active:scale-95"
+          >
+            {isOpenMenu ? (
+              <X className="h-4 w-4 text-white" />
+            ) : (
+              <Heart className="h-3.5 w-3.5 fill-[#DFCBB5] text-[#DFCBB5]" />
+            )}
+          </button>
+        </div>
       </div>
     </>
   );

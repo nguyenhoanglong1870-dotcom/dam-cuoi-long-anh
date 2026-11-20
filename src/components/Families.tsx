@@ -1,133 +1,118 @@
 import { Sparkles } from "lucide-react";
 import { WEDDING_CONFIG } from "@/config/wedding";
+import ScrollReveal from "./ScrollReveal";
 
 export default function Families() {
   const { groom, bride } = WEDDING_CONFIG;
 
   return (
-    <section id="families" className="relative px-4 py-16 sm:px-6 md:py-22">
-      <div className="mx-auto max-w-4xl">
-        {/* Luxury Double-Border Invitation Card */}
-        <div className="relative rounded-[28px] border border-[#C69C6D]/45 bg-white p-2.5 shadow-[0_24px_60px_-28px_rgba(125,52,66,0.22)] sm:p-4">
-          <div className="relative rounded-[22px] border border-[#EBD8C3]/80 bg-gradient-to-b from-[#FFFDF9] via-white to-[#FFF9FA] px-5 py-10 text-center sm:px-10 sm:py-14">
+    <section id="families" className="relative px-4 py-10 sm:px-6">
+      <ScrollReveal delay={150} direction="up">
+        <div className="mx-auto max-w-sm rounded-[28px] border border-[#DFCBB5]/80 bg-white p-2 shadow-[0_18px_45px_-20px_rgba(40,65,50,0.12)] sm:p-3">
+          <div className="relative rounded-[22px] border border-[#EADBCE]/80 bg-gradient-to-b from-[#FFFDFB] via-white to-[#F9FAF8] px-4 py-8 text-center sm:px-6 sm:py-10">
             {/* Corner gold diamond ornaments */}
             <span
               aria-hidden="true"
-              className="absolute top-3.5 left-3.5 h-2.5 w-2.5 rotate-45 border border-[#C69C6D]/70"
+              className="absolute top-3 left-3 h-2 w-2 rotate-45 border border-[#C5A059]/70"
             />
             <span
               aria-hidden="true"
-              className="absolute top-3.5 right-3.5 h-2.5 w-2.5 rotate-45 border border-[#C69C6D]/70"
+              className="absolute top-3 right-3 h-2 w-2 rotate-45 border border-[#C5A059]/70"
             />
             <span
               aria-hidden="true"
-              className="absolute bottom-3.5 left-3.5 h-2.5 w-2.5 rotate-45 border border-[#C69C6D]/70"
+              className="absolute bottom-3 left-3 h-2 w-2 rotate-45 border border-[#C5A059]/70"
             />
             <span
               aria-hidden="true"
-              className="absolute right-3.5 bottom-3.5 h-2.5 w-2.5 rotate-45 border border-[#C69C6D]/70"
+              className="absolute right-3 bottom-3 h-2 w-2 rotate-45 border border-[#C5A059]/70"
             />
 
             {/* Monogram Crest */}
-            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-[#C69C6D]/60 bg-[#FDF7F2] shadow-inner">
-              <span className="font-serif text-lg font-semibold tracking-wider text-[#9F3A4B]">
+            <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-[#DFCBB5] bg-[#F7FAF8] shadow-inner">
+              <span className="font-serif text-base font-semibold tracking-wider text-[#2C4134]">
                 L&amp;A
               </span>
             </div>
 
-            <div className="mt-4 inline-flex items-center gap-2 text-xs font-semibold tracking-[0.26em] text-[#B88B58] uppercase">
-              <Sparkles className="h-3.5 w-3.5" />
+            <div className="mt-3 inline-flex items-center gap-1.5 text-[10px] font-semibold tracking-[0.24em] text-[#A67C43] uppercase">
+              <Sparkles className="h-3 w-3 text-[#C5A059]" />
               <span>Trân Trọng Báo Tin</span>
-              <Sparkles className="h-3.5 w-3.5" />
+              <Sparkles className="h-3 w-3 text-[#C5A059]" />
             </div>
 
-            <h2 className="mt-2 font-serif text-2xl font-bold tracking-[0.08em] text-[#352629] uppercase sm:text-3xl">
+            <h2 className="mt-1 font-serif text-xl font-bold tracking-[0.1em] text-[#23372B] uppercase sm:text-2xl">
               Lễ Thành Hôn
             </h2>
 
             {/* Two Families Grid */}
-            <div className="mt-9 grid grid-cols-1 gap-8 border-y border-[#F0E1D4] py-8 sm:grid-cols-2 sm:gap-0 sm:divide-x sm:divide-[#F0E1D4]">
+            <div className="mt-6 grid grid-cols-2 gap-4 border-y border-[#F0EAE1] py-6 divide-x divide-[#F0EAE1]">
               {/* Nhà Trai */}
-              <div className="flex flex-col items-center justify-center px-3 sm:px-6">
-                <span className="rounded-full border border-[#C69C6D]/45 bg-[#FDF7F0] px-4 py-1 text-[11px] font-semibold tracking-[0.22em] text-[#9C6E3B] uppercase">
+              <div className="flex flex-col items-center justify-center px-2">
+                <span className="rounded-full border border-[#DFCBB5] bg-[#FAF8F5] px-3 py-0.5 text-[10px] font-semibold tracking-[0.18em] text-[#A67C43] uppercase">
                   Nhà Trai
                 </span>
-                <div className="mt-4 space-y-1 text-sm text-[#4A383C] sm:text-base">
+                <div className="mt-3 space-y-0.5 text-xs text-[#455A4D]">
                   {groom.father && (
-                    <p className="font-semibold text-[#2E2023]">
-                      {groom.father}
-                    </p>
+                    <p className="font-semibold text-[#23372B]">{groom.father}</p>
                   )}
                   {groom.mother && (
-                    <p className="font-semibold text-[#2E2023]">
-                      {groom.mother}
-                    </p>
+                    <p className="font-semibold text-[#23372B]">{groom.mother}</p>
                   )}
-                  <p className="pt-1 text-xs text-[#8A6D73] sm:text-sm">
-                    {groom.hometown}
-                  </p>
+                  <p className="pt-0.5 text-[11px] text-[#718579]">{groom.hometown}</p>
                 </div>
               </div>
 
               {/* Nhà Gái */}
-              <div className="flex flex-col items-center justify-center px-3 sm:px-6">
-                <span className="rounded-full border border-[#C69C6D]/45 bg-[#FDF7F0] px-4 py-1 text-[11px] font-semibold tracking-[0.22em] text-[#9C6E3B] uppercase">
+              <div className="flex flex-col items-center justify-center px-2">
+                <span className="rounded-full border border-[#DFCBB5] bg-[#FAF8F5] px-3 py-0.5 text-[10px] font-semibold tracking-[0.18em] text-[#A67C43] uppercase">
                   Nhà Gái
                 </span>
-                <div className="mt-4 space-y-1 text-sm text-[#4A383C] sm:text-base">
+                <div className="mt-3 space-y-0.5 text-xs text-[#455A4D]">
                   {bride.father && (
-                    <p className="font-semibold text-[#2E2023]">
-                      {bride.father}
-                    </p>
+                    <p className="font-semibold text-[#23372B]">{bride.father}</p>
                   )}
                   {bride.mother && (
-                    <p className="font-semibold text-[#2E2023]">
-                      {bride.mother}
-                    </p>
+                    <p className="font-semibold text-[#23372B]">{bride.mother}</p>
                   )}
-                  <p className="pt-1 text-xs text-[#8A6D73] sm:text-sm">
-                    {bride.hometown}
-                  </p>
+                  <p className="pt-0.5 text-[11px] text-[#718579]">{bride.hometown}</p>
                 </div>
               </div>
             </div>
 
             {/* Formal Couple Announcement */}
-            <p className="mt-7 text-xs tracking-[0.18em] text-[#8E6D73] uppercase sm:text-sm">
-              Trân trọng báo tin lễ thành hôn của hai con chúng tôi
+            <p className="mt-5 text-[11px] tracking-[0.18em] text-[#718579] uppercase">
+              Thành hôn của hai con chúng tôi
             </p>
 
-            <div className="mt-5 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-8">
+            <div className="mt-3 flex flex-col items-center justify-center gap-1 sm:flex-row sm:gap-4">
               <div>
-                <p className="text-[11px] font-medium tracking-[0.2em] text-[#B88B58] uppercase">
+                <p className="text-[10px] font-medium tracking-[0.18em] text-[#A67C43] uppercase">
                   {groom.position}
                 </p>
-                <p className="mt-1 font-script text-4xl font-bold text-[#9F3A4B] sm:text-5xl">
+                <p className="font-serif text-2xl font-bold text-[#2C4134]">
                   {groom.fullName}
                 </p>
               </div>
 
-              <span className="font-serif text-3xl text-[#C69C6D] italic">
-                &amp;
-              </span>
+              <span className="font-serif text-xl text-[#C5A059] italic">&amp;</span>
 
               <div>
-                <p className="text-[11px] font-medium tracking-[0.2em] text-[#B88B58] uppercase">
+                <p className="text-[10px] font-medium tracking-[0.18em] text-[#A67C43] uppercase">
                   {bride.position}
                 </p>
-                <p className="mt-1 font-script text-4xl font-bold text-[#9F3A4B] sm:text-5xl">
+                <p className="font-serif text-2xl font-bold text-[#2C4134]">
                   {bride.fullName}
                 </p>
               </div>
             </div>
 
-            <p className="mx-auto mt-7 max-w-xl font-serif text-base leading-relaxed text-[#6A5257] italic sm:text-lg">
-              &ldquo;Hôn nhân không phải là đích đến, mà là khởi đầu cho hành
-              trình nắm tay nhau đi qua mọi mùa yêu thương.&rdquo;
+            <p className="mx-auto mt-5 max-w-xs font-serif text-xs leading-relaxed text-[#556D60] italic">
+              &ldquo;Hôn nhân không phải là đích đến, mà là khởi đầu cho hành trình nắm tay nhau đi qua mọi mùa yêu thương.&rdquo;
             </p>
           </div>
         </div>
-      </div>
+      </ScrollReveal>
     </section>
   );
 }

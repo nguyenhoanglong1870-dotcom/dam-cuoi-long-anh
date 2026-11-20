@@ -1,98 +1,76 @@
-import {
-  Camera,
-  Clock,
-  Flame,
-  Gem,
-  Sparkles,
-  Wine,
-} from "lucide-react";
+import { Camera, Clock, Flame, Gem, Sparkles, Wine } from "lucide-react";
 import { WEDDING_CONFIG, type TimelineItem } from "@/config/wedding";
+import ScrollReveal from "./ScrollReveal";
 
 function TimelineIcon({ type }: { type: TimelineItem["icon"] }) {
   switch (type) {
     case "incense":
-      return <Flame className="h-5 w-5" />;
+      return <Flame className="h-4 w-4" />;
     case "welcome":
-      return <Camera className="h-5 w-5" />;
+      return <Camera className="h-4 w-4" />;
     case "rings":
-      return <Gem className="h-5 w-5" />;
+      return <Gem className="h-4 w-4" />;
     case "toast":
-      return <Wine className="h-5 w-5" />;
+      return <Wine className="h-4 w-4" />;
   }
 }
 
 export default function Timeline() {
   return (
-    <section
-      id="timeline"
-      className="relative px-4 py-16 sm:px-6 md:py-22"
-    >
-      <div className="mx-auto max-w-4xl">
+    <section id="timeline" className="relative px-4 py-10 sm:px-6">
+      <div className="mx-auto max-w-sm">
         {/* Header */}
-        <div className="text-center">
-          <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.24em] text-[#B88B58] uppercase">
-            <Clock className="h-4 w-4 text-[#C69C6D]" />
-            <span>Wedding Schedule</span>
+        <ScrollReveal delay={100} direction="up">
+          <div className="text-center">
+            <div className="inline-flex items-center gap-1.5 text-[10px] font-semibold tracking-[0.24em] text-[#A67C43] uppercase">
+              <Clock className="h-3 w-3 text-[#C5A059]" />
+              <span>Wedding Schedule</span>
+            </div>
+            <h2 className="mt-1 font-script text-3xl font-bold text-[#2C4134] sm:text-4xl">
+              Lịch Trình Ngày Cưới
+            </h2>
+            <p className="mx-auto mt-1 max-w-xs text-xs leading-relaxed text-[#556D60]">
+              Khung giờ chính trong ngày trọng đại{" "}
+              <strong className="font-semibold text-[#23372B]">20/12/2026</strong>.
+            </p>
           </div>
-          <h2 className="mt-2 font-script text-4xl font-bold text-[#9F3A4B] sm:text-5xl">
-            Lịch Trình Ngày Cưới
-          </h2>
-          <p className="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-[#6E5459] sm:text-base">
-            Các khung giờ chính trong ngày trọng đại{" "}
-            <strong className="font-semibold text-[#9F3A4B]">
-              20/12/2026
-            </strong>{" "}
-            để quý khách tiện sắp xếp thời gian chung vui.
-          </p>
-        </div>
+        </ScrollReveal>
 
         {/* Luxury Vertical Timeline */}
-        <div className="relative mt-12">
+        <div className="relative mt-8">
           {/* Vertical Champagne Gold Line */}
           <div
             aria-hidden="true"
-            className="absolute top-2 bottom-2 left-6 w-px bg-gradient-to-b from-transparent via-[#C69C6D]/60 to-transparent md:left-1/2 md:-translate-x-1/2"
+            className="absolute top-3 bottom-3 left-6 w-px bg-gradient-to-b from-transparent via-[#DFCBB5] to-transparent"
           />
 
-          <ol className="space-y-6 md:space-y-8">
-            {WEDDING_CONFIG.timeline.map((item, idx) => {
-              const isLeft = idx % 2 === 0;
-              return (
-                <li
-                  key={item.id}
-                  className="relative flex items-start gap-4 md:grid md:grid-cols-2 md:gap-10"
-                >
-                  {/* Milestone Medallion */}
-                  <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-[#C69C6D] bg-white text-[#9F3A4B] shadow-md shadow-[#C69C6D]/20 md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
-                    <TimelineIcon type={item.icon} />
-                  </div>
+          <ol className="space-y-4">
+            {WEDDING_CONFIG.timeline.map((item, idx) => (
+              <li key={item.id}>
+                <ScrollReveal delay={idx * 120} direction="up">
+                  <div className="relative flex items-start gap-3.5">
+                    {/* Milestone Medallion */}
+                    <div className="relative z-10 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border-2 border-[#DFCBB5] bg-white text-[#2C4134] shadow-sm">
+                      <TimelineIcon type={item.icon} />
+                    </div>
 
-                  {/* Card Container */}
-                  <div
-                    className={`flex-1 ${
-                      isLeft
-                        ? "md:col-start-1 md:pr-8 md:text-right"
-                        : "md:col-start-2 md:pl-8 md:text-left"
-                    }`}
-                  >
-                    <div className="rounded-3xl border border-[#C69C6D]/30 bg-white/95 p-5 shadow-[0_14px_36px_-20px_rgba(159,58,75,0.2)] transition hover:border-[#C69C6D]/60 sm:p-6">
-                      <div
-                        className={`inline-flex items-center gap-1.5 rounded-full bg-[#FDF6EE] px-3.5 py-1 text-xs font-bold tracking-[0.18em] text-[#9F3A4B] ring-1 ring-[#C69C6D]/35`}
-                      >
-                        <Sparkles className="h-3 w-3 text-[#C69C6D]" />
+                    {/* Card Container */}
+                    <div className="flex-1 rounded-2xl border border-[#DFCBB5]/70 bg-white/95 p-4 shadow-sm">
+                      <div className="inline-flex items-center gap-1 rounded-full bg-[#F4F8F5] px-2.5 py-0.5 text-[10px] font-bold tracking-wider text-[#2C4134] ring-1 ring-[#D8E6DE]">
+                        <Sparkles className="h-2.5 w-2.5 text-[#C5A059]" />
                         <span>{item.time}</span>
                       </div>
-                      <h3 className="mt-3 font-serif text-2xl font-bold text-[#352629]">
+                      <h3 className="mt-1.5 font-serif text-lg font-bold text-[#23372B]">
                         {item.title}
                       </h3>
-                      <p className="mt-1.5 text-sm leading-relaxed text-[#6E5459]">
+                      <p className="mt-0.5 text-xs leading-relaxed text-[#556D60]">
                         {item.description}
                       </p>
                     </div>
                   </div>
-                </li>
-              );
-            })}
+                </ScrollReveal>
+              </li>
+            ))}
           </ol>
         </div>
       </div>

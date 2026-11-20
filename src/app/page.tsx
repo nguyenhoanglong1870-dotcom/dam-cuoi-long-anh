@@ -104,7 +104,7 @@ export default function HomePage() {
   };
 
   return (
-    <main className="relative min-h-screen w-full bg-[#FDFBF7] text-[#352629] overflow-x-hidden selection:bg-[#E8F0EC] selection:text-[#233D31]">
+    <div className="min-h-screen w-full bg-[#F2EFE9] text-[#23372B] flex justify-center selection:bg-[#EBF2ED] selection:text-[#2C4134]">
       {/* Background Audio Element */}
       <audio
         ref={audioRef}
@@ -122,32 +122,35 @@ export default function HomePage() {
       {/* Floating Companion QR for Desktop Visitors */}
       <DesktopQrCompanion />
 
-      {/* Section 1: Hero with Arch-Framed Chibi & Romantic Quote */}
-      <Hero />
+      {/* Centered Boutique Mobile Canvas (Chuẩn tỷ lệ vàng như ngaychungdoi.com) */}
+      <main className="relative w-full max-w-[460px] min-h-screen bg-[#FCFBF8] shadow-[0_20px_80px_rgba(40,65,50,0.12)] border-x border-[#EAE5DC] overflow-x-hidden">
+        {/* Section 1: Hero with Arch-Framed Chibi & Romantic Quote */}
+        <Hero />
 
-      {/* Section 2: Save The Date Calendar (Tháng 12/2026 - Ngày 20 hình trái tim) */}
-      <WeddingCalendar />
+        {/* Section 2: Save The Date Calendar (Tháng 12/2026 - Ngày 20 hình trái tim) */}
+        <WeddingCalendar />
 
-      {/* Section 3: Two Families Announcement */}
-      <Families />
+        {/* Section 3: Two Families Announcement */}
+        <Families />
 
-      {/* Section 4: We Got Married - Countdown to 20/12/2026 */}
-      <Countdown />
+        {/* Section 4: We Got Married - Countdown to 20/12/2026 */}
+        <Countdown />
 
-      {/* Section 5: Wedding Day Schedule / Timeline */}
-      <Timeline />
+        {/* Section 5: Wedding Day Schedule / Timeline */}
+        <Timeline />
 
-      {/* Section 6: Wedding Event Details & Google Maps */}
-      <Event />
+        {/* Section 6: Wedding Event Details & Google Maps */}
+        <Event />
 
-      {/* Section 7: Gift Box with Segmented Groom/Bride Switcher & Vector VietQR */}
-      <GiftBox />
+        {/* Section 7: Gift Box with Segmented Groom/Bride Switcher & Vector VietQR */}
+        <GiftBox />
 
-      {/* Section 8: RSVP Form with Side Selector & Instant Telegram Notification */}
-      <RSVP />
+        {/* Section 8: RSVP Form with Side Selector & Instant Telegram Notification */}
+        <RSVP />
 
-      {/* Section 9: Footer */}
-      <Footer />
-    </main>
+        {/* Section 9: Footer */}
+        <Footer />
+      </main>
+    </div>
   );
 }

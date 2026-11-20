@@ -2,125 +2,134 @@ import Image from "next/image";
 import { CalendarHeart, ChevronDown, Heart, Sparkles } from "lucide-react";
 import { WEDDING_CONFIG } from "@/config/wedding";
 import FloatingPetals from "./FloatingPetals";
+import ScrollReveal from "./ScrollReveal";
 
 export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-[#FAF4EC] via-[#FDFBF7] to-[#FDFBF7] px-4 pt-14 pb-12 sm:px-6"
+      className="relative flex min-h-[92svh] flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-[#F2F7F4] via-[#FCFBF8] to-[#FCFBF8] px-4 pt-10 pb-12 sm:px-6"
     >
-      {/* Luxury ambient glows */}
+      {/* Soft luxury ambient glows */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -top-28 left-1/2 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-[#E8D4BE]/35 blur-3xl"
+        className="pointer-events-none absolute -top-24 left-1/2 h-[380px] w-[380px] -translate-x-1/2 rounded-full bg-[#E3EDE7]/50 blur-3xl"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute right-0 bottom-8 h-80 w-80 rounded-full bg-[#FCEEF0]/40 blur-3xl"
+        className="pointer-events-none absolute right-0 bottom-4 h-72 w-72 rounded-full bg-[#F5ECE1]/40 blur-3xl"
       />
 
       {/* Floating Petals */}
       <FloatingPetals />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-md flex-col items-center text-center">
-        {/* Luxury Tagline */}
-        <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#C69C6D]/45 bg-white/90 px-4 py-1 text-[11px] font-semibold tracking-[0.24em] text-[#9C6E3B] uppercase shadow-sm backdrop-blur-sm">
-          <Sparkles className="h-3 w-3 text-[#C69C6D]" />
-          <span>Save The Date</span>
-          <Sparkles className="h-3 w-3 text-[#C69C6D]" />
-        </div>
+      <div className="relative z-10 mx-auto flex w-full max-w-sm flex-col items-center text-center">
+        {/* We Got Married Calligraphy */}
+        <ScrollReveal delay={100} direction="down">
+          <p className="font-script text-3xl font-medium tracking-wide text-[#385343] sm:text-4xl">
+            We got married
+          </p>
+          <div className="mt-1 inline-flex items-center gap-1.5 text-[10px] font-semibold tracking-[0.26em] text-[#A67C43] uppercase">
+            <Sparkles className="h-2.5 w-2.5 text-[#C5A059]" />
+            <span>Save The Date</span>
+            <Sparkles className="h-2.5 w-2.5 text-[#C5A059]" />
+          </div>
+        </ScrollReveal>
 
-        <p className="font-serif text-xs tracking-[0.22em] text-[#7A5B61] uppercase sm:text-sm">
-          Lễ Thành Hôn
-        </p>
+        {/* Groom & Bride Names in Luxury Typography */}
+        <ScrollReveal delay={200} direction="up">
+          <h1 className="mt-3 font-serif text-3xl font-normal tracking-wide text-[#23372B] sm:text-4xl">
+            {WEDDING_CONFIG.groom.name}
+            <span className="mx-2 font-script text-2xl text-[#C5A059]">&amp;</span>
+            {WEDDING_CONFIG.bride.name}
+          </h1>
 
-        {/* Groom & Bride Names in handwriting calligraphy */}
-        <h1 className="mt-3 font-script text-5xl font-bold tracking-wide text-[#9F3A4B] drop-shadow-sm sm:text-6xl">
-          {WEDDING_CONFIG.groom.name} &amp; {WEDDING_CONFIG.bride.name}
-        </h1>
+          <div className="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold tracking-[0.16em] text-[#556D60]">
+            <CalendarHeart className="h-3.5 w-3.5 text-[#C5A059]" />
+            <span>{WEDDING_CONFIG.dateDisplay}</span>
+          </div>
+        </ScrollReveal>
 
-        <div className="mt-2.5 inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] text-[#5A343B]">
-          <CalendarHeart className="h-4 w-4 text-[#C69C6D]" />
-          <span>{WEDDING_CONFIG.dateDisplay}</span>
-        </div>
+        {/* Arch-Framed Chibi Illustration (Vòm Cung Cổ Điển Tinh Tế) */}
+        <ScrollReveal delay={300} direction="fade" className="w-full flex justify-center">
+          <div className="relative mt-5 mb-5 w-full max-w-[270px]">
+            {/* Outer gold hairline border */}
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -inset-2 rounded-t-[130px] rounded-b-[24px] border border-[#DFCBB5]/70"
+            />
 
-        {/* Arch-Framed Chibi Illustration (Phong cách Vòm Cung NgayChungDoi) */}
-        <div className="relative mt-6 mb-6 w-full max-w-[280px] sm:max-w-[310px]">
-          {/* Outer gold hairline border */}
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -inset-2 rounded-t-[140px] rounded-b-[28px] border border-dashed border-[#C69C6D]/60"
-          />
+            <div className="relative aspect-[3/3.8] w-full overflow-hidden rounded-t-[125px] rounded-b-[20px] border-4 border-white bg-gradient-to-b from-[#FFFDF9] to-[#F5ECE1] p-1.5 shadow-[0_18px_45px_-15px_rgba(40,65,50,0.2)] ring-1 ring-[#DFCBB5]/50">
+              <div className="relative h-full w-full overflow-hidden rounded-t-[120px] rounded-b-[16px] bg-[#FAF8F5]">
+                <Image
+                  src={WEDDING_CONFIG.heroChibiImage}
+                  alt={`Ảnh cưới Chibi ${WEDDING_CONFIG.groom.name} & ${WEDDING_CONFIG.bride.name}`}
+                  fill
+                  priority
+                  sizes="270px"
+                  className="object-cover object-center"
+                />
+              </div>
+            </div>
 
-          <div className="relative aspect-[3/3.8] w-full overflow-hidden rounded-t-[130px] rounded-b-[24px] border-4 border-white bg-gradient-to-b from-[#FFFDF9] to-[#FCEEF0] p-1.5 shadow-[0_20px_50px_-15px_rgba(35,61,49,0.25)] ring-1 ring-[#C69C6D]/40">
-            <div className="relative h-full w-full overflow-hidden rounded-t-[125px] rounded-b-[20px] bg-[#FDFBF7]">
-              <Image
-                src={WEDDING_CONFIG.heroChibiImage}
-                alt={`Ảnh cưới Chibi ${WEDDING_CONFIG.groom.name} & ${WEDDING_CONFIG.bride.name}`}
-                fill
-                priority
-                sizes="(max-width: 640px) 280px, 310px"
-                className="object-cover object-center"
-              />
+            {/* Floating Gold Date Badge */}
+            <div className="absolute -bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-1.5 rounded-full border border-[#DFCBB5] bg-white px-4 py-1 shadow-sm">
+              <Heart className="h-3 w-3 fill-[#A34857] text-[#A34857]" />
+              <span className="font-serif text-[11px] font-semibold tracking-[0.16em] text-[#2C4134]">
+                20 . 12 . 2026
+              </span>
             </div>
           </div>
+        </ScrollReveal>
 
-          {/* Floating Gold Date Badge */}
-          <div className="absolute -bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-1.5 rounded-full border border-[#C69C6D]/60 bg-white px-4 py-1 shadow-md">
-            <Heart className="h-3 w-3 fill-[#9F3A4B] text-[#9F3A4B]" />
-            <span className="font-serif text-xs font-bold tracking-[0.16em] text-[#233D31]">
-              WE ARE MARRIED
-            </span>
+        {/* Romantic Quote Banner */}
+        <ScrollReveal delay={400} direction="up">
+          <div className="mt-3 rounded-2xl border border-[#EADBCE]/80 bg-white/80 px-4 py-2.5 shadow-sm backdrop-blur-sm">
+            <p className="font-serif text-xs italic leading-relaxed text-[#4A6153] sm:text-sm">
+              &ldquo;Em là bình yên anh muốn giữ · Anh là hạnh phúc em muốn trao.&rdquo;
+            </p>
           </div>
-        </div>
 
-        {/* Romantic Quote Banner (Phong cách NgayChungDoi) */}
-        <div className="mt-2 rounded-2xl border border-[#F0E1D4] bg-[#FFFDF9]/90 px-4 py-3 shadow-sm">
-          <p className="font-serif text-sm italic leading-relaxed text-[#5A3E44] sm:text-base">
-            &ldquo;Em là bình yên anh muốn giữ · Anh là hạnh phúc em muốn
-            trao.&rdquo;
-          </p>
-        </div>
+          {/* Event Schedule Text */}
+          <div className="mt-3 space-y-0.5">
+            <p className="font-serif text-sm font-bold text-[#23372B]">
+              {WEDDING_CONFIG.dateFullText}
+            </p>
+            <p className="text-[11px] text-[#697E72]">
+              ({WEDDING_CONFIG.lunarDateText})
+            </p>
+            <p className="pt-0.5 text-xs text-[#526B5D]">
+              Sân Chơi Thôn Nhuế, Kim Chung, Xã Thiên Lộc, Đông Anh, Hà Nội
+            </p>
+          </div>
 
-        {/* Event Schedule Text */}
-        <div className="mt-4 space-y-1">
-          <p className="font-serif text-base font-bold text-[#233D31]">
-            {WEDDING_CONFIG.dateFullText}
-          </p>
-          <p className="text-xs text-[#7A5B61]">
-            ({WEDDING_CONFIG.lunarDateText})
-          </p>
-          <p className="pt-1 text-xs text-[#6E5459]">
-            Tại: Sân Chơi Thôn Nhuế, Kim Chung, Xã Thiên Lộc, Đông Anh, Hà Nội
-          </p>
-        </div>
+          {/* Action Buttons */}
+          <div className="mt-5 flex w-full flex-col gap-2 sm:flex-row sm:justify-center">
+            <a
+              href="#rsvp"
+              className="inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full bg-[#2C4134] px-6 py-2.5 text-xs font-semibold text-white shadow-md shadow-[#2C4134]/25 transition hover:bg-[#1E2E25] active:scale-[0.98] sm:w-auto"
+            >
+              <Heart className="h-3.5 w-3.5 text-[#DFCBB5]" />
+              <span>Xác nhận tham dự</span>
+            </a>
+            <a
+              href="#events"
+              className="inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full border border-[#DFCBB5] bg-white px-6 py-2.5 text-xs font-semibold text-[#2C4134] shadow-sm transition hover:bg-[#F4F8F5] active:scale-[0.98] sm:w-auto"
+            >
+              <span>Thời gian &amp; Địa điểm</span>
+            </a>
+          </div>
 
-        {/* Mobile-first Action Buttons */}
-        <div className="mt-6 flex w-full flex-col gap-2.5 sm:flex-row sm:justify-center">
+          {/* Scroll Indicator */}
           <a
-            href="#rsvp"
-            className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-full bg-[#233D31] px-6 py-2.5 text-sm font-semibold text-white shadow-md shadow-[#233D31]/25 transition hover:bg-[#1A2E25] active:scale-[0.98] sm:w-auto"
+            href="#calendar"
+            aria-label="Cuộn xuống xem thiệp"
+            className="mt-6 inline-flex flex-col items-center gap-1 text-[10px] tracking-widest text-[#7A9184] uppercase transition hover:text-[#2C4134]"
           >
-            <Heart className="h-4 w-4 text-[#F2B8C4]" />
-            <span>Xác nhận tham dự</span>
+            <span>Khám phá thiệp</span>
+            <ChevronDown className="h-3.5 w-3.5 animate-bounce" />
           </a>
-          <a
-            href="#events"
-            className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-full border border-[#C69C6D]/60 bg-white/95 px-6 py-2.5 text-sm font-semibold text-[#233D31] shadow-sm transition hover:bg-[#FCEEF0]/60 active:scale-[0.98] sm:w-auto"
-          >
-            <span>Thời gian &amp; Địa điểm</span>
-          </a>
-        </div>
-
-        {/* Scroll Indicator */}
-        <a
-          href="#calendar"
-          aria-label="Cuộn xuống xem thiệp"
-          className="mt-8 inline-flex flex-col items-center gap-1 text-[11px] tracking-widest text-[#9C767D] uppercase transition hover:text-[#9F3A4B]"
-        >
-          <span>Khám phá thiệp</span>
-          <ChevronDown className="h-4 w-4 animate-bounce" />
-        </a>
+        </ScrollReveal>
       </div>
     </section>
   );

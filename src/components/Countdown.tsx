@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Clock, Heart } from "lucide-react";
 import { WEDDING_CONFIG } from "@/config/wedding";
+import ScrollReveal from "./ScrollReveal";
 
 interface TimeLeft {
   days: number;
@@ -73,50 +74,49 @@ export default function Countdown() {
   ];
 
   return (
-    <section id="countdown" className="relative px-4 py-12 sm:px-6">
-      <div className="mx-auto max-w-sm rounded-[28px] border border-[#C69C6D]/35 bg-white/95 p-5 text-center shadow-[0_18px_45px_-20px_rgba(35,61,49,0.2)] sm:p-7">
-        <div className="inline-flex items-center gap-1.5 text-[11px] font-semibold tracking-[0.24em] text-[#B88B58] uppercase">
-          <Clock className="h-3.5 w-3.5 text-[#C69C6D]" />
-          <span>Cùng Đếm Ngược</span>
-        </div>
-
-        {/* Heading: We Got Married (Phong cách NgayChungDoi) */}
-        <h2 className="mt-1 font-script text-4xl font-bold text-[#233D31] sm:text-5xl">
-          We got married
-        </h2>
-
-        <p className="mt-2 text-xs leading-relaxed text-[#6E5459]">
-          Từng khoảnh khắc trôi qua là thêm một bước gần hơn đến ngày{" "}
-          <strong className="font-semibold text-[#233D31]">20/12/2026</strong>{" "}
-          của {WEDDING_CONFIG.groom.name} &amp; {WEDDING_CONFIG.bride.name}.
-        </p>
-
-        {/* 4 Forest Green Countdown Tiles (Chuẩn NgayChungDoi) */}
-        <div className="mt-6 grid grid-cols-4 gap-2 sm:gap-2.5">
-          {units.map((unit) => (
-            <div
-              key={unit.label}
-              className="flex flex-col items-center justify-center rounded-2xl bg-[#233D31] py-3.5 px-1 text-white shadow-md shadow-[#233D31]/25"
-            >
-              <span className="font-serif text-2xl font-bold tabular-nums text-white sm:text-3xl">
-                {unit.value}
-              </span>
-              <span className="mt-1 text-[10px] font-medium tracking-wider text-[#E5C992] uppercase">
-                {unit.label}
-              </span>
-            </div>
-          ))}
-        </div>
-
-        {timeLeft?.isPast && (
-          <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-[#EBD8C3] bg-[#FFF8F9] px-4 py-1.5 text-xs font-medium text-[#9F3A4B]">
-            <Heart className="h-3.5 w-3.5 fill-[#9F3A4B]" />
-            <span>
-              Ngày trọng đại đã diễn ra trọn vẹn! Cảm ơn tình cảm của quý khách.
-            </span>
+    <section id="countdown" className="relative px-4 py-10 sm:px-6">
+      <ScrollReveal delay={150} direction="up">
+        <div className="mx-auto max-w-sm rounded-[28px] border border-[#DFCBB5]/80 bg-white/95 p-5 text-center shadow-[0_16px_40px_-20px_rgba(40,65,50,0.12)] sm:p-7">
+          <div className="inline-flex items-center gap-1.5 text-[10px] font-semibold tracking-[0.24em] text-[#A67C43] uppercase">
+            <Clock className="h-3 w-3 text-[#C5A059]" />
+            <span>Cùng Đếm Ngược</span>
           </div>
-        )}
-      </div>
+
+          <h2 className="mt-1 font-script text-3xl font-bold text-[#2C4134] sm:text-4xl">
+            We got married
+          </h2>
+
+          <p className="mt-1.5 text-xs leading-relaxed text-[#556D60]">
+            Từng khoảnh khắc trôi qua là thêm một bước gần hơn đến ngày{" "}
+            <strong className="font-semibold text-[#23372B]">20/12/2026</strong>{" "}
+            của {WEDDING_CONFIG.groom.name} &amp; {WEDDING_CONFIG.bride.name}.
+          </p>
+
+          {/* 4 Forest Green Countdown Tiles */}
+          <div className="mt-5 grid grid-cols-4 gap-2 sm:gap-2.5">
+            {units.map((unit) => (
+              <div
+                key={unit.label}
+                className="flex flex-col items-center justify-center rounded-2xl bg-[#2C4134] py-3 px-1 text-white shadow-md shadow-[#2C4134]/20"
+              >
+                <span className="font-serif text-2xl font-bold tabular-nums text-white sm:text-3xl">
+                  {unit.value}
+                </span>
+                <span className="mt-0.5 text-[9px] font-medium tracking-wider text-[#DFCBB5] uppercase">
+                  {unit.label}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          {timeLeft?.isPast && (
+            <div className="mt-4 inline-flex items-center gap-1.5 rounded-full border border-[#DFCBB5] bg-[#FAF8F5] px-3.5 py-1 text-xs font-medium text-[#2C4134]">
+              <Heart className="h-3 w-3 fill-[#A34857] text-[#A34857]" />
+              <span>Ngày trọng đại đã diễn ra trọn vẹn!</span>
+            </div>
+          )}
+        </div>
+      </ScrollReveal>
     </section>
   );
 }
