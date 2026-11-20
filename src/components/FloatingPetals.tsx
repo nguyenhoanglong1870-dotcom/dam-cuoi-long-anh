@@ -109,7 +109,7 @@ export default function FloatingPetals() {
   return (
     <div
       aria-hidden="true"
-      className="pointer-events-none fixed inset-0 z-30 overflow-hidden select-none"
+      className="pointer-events-none fixed inset-0 z-[60] overflow-hidden select-none"
     >
       {PETAL_LIST.map((petal) => (
         <div

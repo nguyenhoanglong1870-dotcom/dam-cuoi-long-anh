@@ -114,6 +114,9 @@ export default function HomePage() {
         preload="auto"
       />
 
+      {/* Global Falling Petals Ambient Drift - Active on Opening Cover AND throughout the page */}
+      <FloatingPetals />
+
       {/* Luxury Opening Cover with Monogram Wax Seal (Save The Date) */}
       <OpeningCover isOpen={isCoverOpen} onOpen={handleOpenCover} />
 
@@ -125,9 +128,6 @@ export default function HomePage() {
 
       {/* Centered Boutique Mobile Canvas (Chuẩn tỷ lệ vàng như ngaychungdoi.com) */}
       <main className="relative w-full max-w-[460px] min-h-screen bg-[#FCFBF8] shadow-[0_20px_80px_rgba(40,65,50,0.12)] border-x border-[#EAE5DC] overflow-x-hidden">
-        {/* Soft Falling Petals Ambient Drift */}
-        <FloatingPetals />
-
         {/* Section 1: Hero with Arch-Framed Chibi & Romantic Quote */}
         <Hero />
 

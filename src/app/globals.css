@@ -14,91 +14,112 @@
   --color-ink: #23372b;
 }
 
-/* Natural petal drifting animations - Soft, organic wind sway without clutter */
+/* Light shimmer sweep across the invitation card */
+@keyframes shimmer-sweep {
+  0% {
+    transform: translateX(-180%) rotate(25deg);
+  }
+  30%, 100% {
+    transform: translateX(260%) rotate(25deg);
+  }
+}
+
+/* Twinkling gold star sparkles */
+@keyframes star-twinkle {
+  0%, 100% {
+    transform: scale(0.65) rotate(0deg);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scale(1.2) rotate(45deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 6px rgba(229, 201, 146, 0.9));
+  }
+}
+
+/* Wax seal pulsing heartbeat */
+@keyframes wax-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.5);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 12px rgba(197, 160, 89, 0);
+  }
+}
+
+/* Gold pulse glow */
+@keyframes gold-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 2px rgba(212, 175, 55, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.9));
+  }
+}
+
+/* Natural petal drifting animations - Continuous soft ambient wind */
 @keyframes petal-drift-left {
   0% {
-    transform: translate3d(0, -50px, 0) rotate(0deg) scale(0.9);
+    transform: translate3d(0, -60px, 0) rotate(0deg) scale(0.85);
     opacity: 0;
   }
   10% {
-    opacity: 0.8;
+    opacity: 0.85;
   }
   50% {
-    transform: translate3d(-35px, 50vh, 0) rotate(160deg) scale(1);
-    opacity: 0.75;
+    transform: translate3d(-40px, 50vh, 0) rotate(160deg) scale(1);
+    opacity: 0.8;
   }
   90% {
     opacity: 0.7;
   }
   100% {
-    transform: translate3d(20px, 105vh, 0) rotate(320deg) scale(0.95);
+    transform: translate3d(25px, 105vh, 0) rotate(340deg) scale(0.9);
     opacity: 0;
   }
 }
 
 @keyframes petal-drift-right {
   0% {
-    transform: translate3d(0, -50px, 0) rotate(0deg) scale(0.95);
+    transform: translate3d(0, -60px, 0) rotate(0deg) scale(0.9);
     opacity: 0;
   }
   12% {
-    opacity: 0.85;
+    opacity: 0.9;
   }
   45% {
-    transform: translate3d(40px, 45vh, 0) rotate(-140deg) scale(1.05);
-    opacity: 0.75;
+    transform: translate3d(45px, 45vh, 0) rotate(-150deg) scale(1.05);
+    opacity: 0.8;
   }
   85% {
-    opacity: 0.65;
+    opacity: 0.7;
   }
   100% {
-    transform: translate3d(-25px, 105vh, 0) rotate(-300deg) scale(0.9);
+    transform: translate3d(-30px, 105vh, 0) rotate(-320deg) scale(0.85);
     opacity: 0;
   }
 }
 
 @keyframes petal-drift-center {
   0% {
-    transform: translate3d(0, -50px, 0) rotate(0deg) scale(0.85);
+    transform: translate3d(0, -60px, 0) rotate(0deg) scale(0.8);
     opacity: 0;
   }
   15% {
-    opacity: 0.75;
+    opacity: 0.8;
   }
   60% {
-    transform: translate3d(18px, 60vh, 0) rotate(190deg) scale(1);
-    opacity: 0.7;
+    transform: translate3d(20px, 60vh, 0) rotate(190deg) scale(1);
+    opacity: 0.75;
   }
   95% {
-    opacity: 0.6;
+    opacity: 0.65;
   }
   100% {
-    transform: translate3d(-15px, 105vh, 0) rotate(360deg) scale(0.9);
+    transform: translate3d(-20px, 105vh, 0) rotate(360deg) scale(0.85);
     opacity: 0;
-  }
-}
-
-/* Floating golden sparkles for Opening Cover */
-@keyframes sparkle-float {
-  0%, 100% {
-    transform: translate3d(0, 0, 0) scale(0.8);
-    opacity: 0.25;
-  }
-  50% {
-    transform: translate3d(8px, -16px, 0) scale(1.2);
-    opacity: 0.9;
-  }
-}
-
-/* Wax seal gentle pulsing heartbeat */
-@keyframes wax-pulse {
-  0%, 100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.4);
-  }
-  50% {
-    transform: scale(1.06);
-    box-shadow: 0 0 0 10px rgba(197, 160, 89, 0);
   }
 }
 
@@ -112,13 +133,20 @@
   }
 }
 
-/* Envelope 3D flap opening and card reveal */
-.preserve-3d {
-  transform-style: preserve-3d;
+.animate-shimmer {
+  animation: shimmer-sweep 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
-.perspective-1000 {
-  perspective: 1000px;
+.animate-twinkle {
+  animation: star-twinkle var(--duration, 3s) ease-in-out var(--delay, 0s) infinite;
+}
+
+.animate-gold-glow {
+  animation: gold-glow 2.5s ease-in-out infinite;
+}
+
+.animate-wax {
+  animation: wax-pulse 2.4s ease-in-out infinite;
 }
 
 .animate-petal-left {
@@ -136,16 +164,7 @@
   will-change: transform, opacity;
 }
 
-.animate-sparkle {
-  animation: sparkle-float var(--duration, 4s) ease-in-out var(--delay, 0s) infinite;
-  will-change: transform, opacity;
-}
-
-.animate-wax {
-  animation: wax-pulse 2.2s ease-in-out infinite;
-}
-
-/* Custom scrollbar hiding for clean boutique look */
+/* Custom scrollbar hiding */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -158,7 +177,8 @@
   .animate-petal-left,
   .animate-petal-right,
   .animate-petal-center,
-  .animate-sparkle,
+  .animate-shimmer,
+  .animate-twinkle,
   .animate-wax {
     animation: none !important;
   }
