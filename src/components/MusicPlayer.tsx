@@ -7,6 +7,8 @@ import { WEDDING_CONFIG } from "@/config/wedding";
 export default function MusicPlayer() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const userPausedRef = useRef(false);
+  const hasAutoStartedRef = useRef(false);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -20,10 +22,38 @@ export default function MusicPlayer() {
     audio.addEventListener("pause", handlePause);
     audio.addEventListener("play", handlePlay);
 
+    /**
+     * Tự động bật nhạc khi khách chạm/bấm bất kỳ vị trí nào trên màn hình lần đầu
+     * (Khắc phục chính sách Autoplay Policy của Chrome, Safari iOS, Android).
+     */
+    const triggerAutoPlay = () => {
+      if (hasAutoStartedRef.current || userPausedRef.current) return;
+      hasAutoStartedRef.current = true;
+      audio.volume = 0.65;
+      audio
+        .play()
+        .then(() => {
+          setIsPlaying(true);
+        })
+        .catch(() => {
+          // Trình duyệt chưa cho phép, cho phép thử lại ở lần bấm tiếp theo
+          hasAutoStartedRef.current = false;
+        });
+    };
+
+    window.addEventListener("click", triggerAutoPlay, { passive: true });
+    window.addEventListener("touchstart", triggerAutoPlay, { passive: true });
+    window.addEventListener("pointerdown", triggerAutoPlay, { passive: true });
+    window.addEventListener("scroll", triggerAutoPlay, { passive: true, once: true });
+
     return () => {
       audio.removeEventListener("ended", handleEnded);
       audio.removeEventListener("pause", handlePause);
       audio.removeEventListener("play", handlePlay);
+      window.removeEventListener("click", triggerAutoPlay);
+      window.removeEventListener("touchstart", triggerAutoPlay);
+      window.removeEventListener("pointerdown", triggerAutoPlay);
+      window.removeEventListener("scroll", triggerAutoPlay);
     };
   }, []);
 
@@ -32,12 +62,15 @@ export default function MusicPlayer() {
     if (!audio) return;
 
     if (isPlaying) {
+      userPausedRef.current = true;
       audio.pause();
       setIsPlaying(false);
       return;
     }
 
     try {
+      userPausedRef.current = false;
+      hasAutoStartedRef.current = true;
       audio.volume = 0.65;
       await audio.play();
       setIsPlaying(true);
