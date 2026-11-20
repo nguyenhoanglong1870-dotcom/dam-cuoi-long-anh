@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" fill="none">
+  <defs>
+    <linearGradient id="g5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F8EFE6" />
+      <stop offset="100%" stop-color="#EED4D8" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="800" fill="url(#g5)" />
+  <rect x="30" y="30" width="540" height="740" rx="18" stroke="#C69C6D" stroke-opacity="0.4" stroke-width="2" />
+  <circle cx="300" cy="310" r="85" fill="#F6D5C8" opacity="0.8" />
+  <text x="300" y="475" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#6F4046">Hoàng Hôn Ngọt Ngào</text>
+  <text x="300" y="515" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#9E7379" letter-spacing="3">ALBUM ẢNH CƯỚI — 05</text>
+</svg>

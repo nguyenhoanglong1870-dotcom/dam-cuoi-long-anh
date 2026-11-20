@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" fill="none">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#FFF7F8" />
+      <stop offset="65%" stop-color="#FBE8EC" />
+      <stop offset="100%" stop-color="#F5D7DE" />
+    </radialGradient>
+    <linearGradient id="goldRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D9B382" />
+      <stop offset="50%" stop-color="#F0D7B0" />
+      <stop offset="100%" stop-color="#B88952" />
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="600" rx="300" fill="url(#bgGlow)" />
+  <circle cx="300" cy="300" r="282" stroke="url(#goldRing)" stroke-width="2" stroke-dasharray="6 8" opacity="0.7" />
+  <circle cx="300" cy="300" r="266" stroke="#C69C6D" stroke-width="1" opacity="0.35" />
+
+  <!-- Subtle floral arch -->
+  <path d="M120 430 C120 200, 480 200, 480 430" stroke="#D9A7B0" stroke-width="2" stroke-dasharray="4 6" fill="none" opacity="0.6" />
+
+  <!-- Floating hearts -->
+  <path d="M300 135 C292 122, 273 125, 273 141 C273 155, 300 172, 300 172 C300 172, 327 155, 327 141 C327 125, 308 122, 300 135Z" fill="#C85A6B" opacity="0.85" />
+  <path d="M205 182 C200 175, 190 177, 190 185 C190 192, 205 201, 205 201 C205 201, 220 192, 220 185 C220 177, 210 175, 205 182Z" fill="#E397A5" opacity="0.7" />
+  <path d="M398 175 C393 168, 383 170, 383 178 C383 185, 398 194, 398 194 C398 194, 413 185, 413 178 C413 170, 403 168, 398 175Z" fill="#E397A5" opacity="0.7" />
+
+  <!-- Cute Chibi Groom (Left) -->
+  <g transform="translate(175, 225)">
+    <!-- Suit body -->
+    <path d="M30 130 C30 112, 90 112, 90 130 L98 205 L22 205 Z" fill="#2F3542" />
+    <!-- White shirt V -->
+    <polygon points="48,122 72,122 60,154" fill="#FFFFFF" />
+    <!-- Red bow tie -->
+    <polygon points="51,126 60,131 51,136" fill="#9F3A4B" />
+    <polygon points="69,126 60,131 69,136" fill="#9F3A4B" />
+    <circle cx="60" cy="131" r="3" fill="#7D2938" />
+    <!-- Hair back -->
+    <ellipse cx="60" cy="60" rx="52" ry="50" fill="#2B2626" />
+    <!-- Face -->
+    <circle cx="60" cy="70" r="44" fill="#FFE6D5" />
+    <!-- Hair bangs -->
+    <path d="M16 62 C20 26, 100 24, 104 62 C92 46, 76 44, 60 52 C46 44, 30 46, 16 62 Z" fill="#2B2626" />
+    <!-- Eyes -->
+    <circle cx="45" cy="73" r="4.5" fill="#2B2626" />
+    <circle cx="75" cy="73" r="4.5" fill="#2B2626" />
+    <circle cx="43.5" cy="71.5" r="1.5" fill="#FFFFFF" />
+    <circle cx="73.5" cy="71.5" r="1.5" fill="#FFFFFF" />
+    <!-- Blush -->
+    <ellipse cx="36" cy="82" rx="6" ry="3.5" fill="#F4A5AE" opacity="0.65" />
+    <ellipse cx="84" cy="82" rx="6" ry="3.5" fill="#F4A5AE" opacity="0.65" />
+    <!-- Smile -->
+    <path d="M53 84 Q60 91 67 84" stroke="#9F3A4B" stroke-width="2.5" stroke-linecap="round" fill="none" />
+  </g>
+
+  <!-- Cute Chibi Bride (Right) -->
+  <g transform="translate(305, 225)">
+    <!-- Veil -->
+    <path d="M10 65 C-5 120, -2 195, 16 215 L104 215 C122 195, 125 120, 110 65 Z" fill="#FFFFFF" opacity="0.65" />
+    <!-- Wedding Dress -->
+    <path d="M32 132 C32 115, 88 115, 88 132 L114 205 L6 205 Z" fill="#FFFFFF" stroke="#E9D6DA" stroke-width="2" />
+    <!-- Bouquet -->
+    <circle cx="42" cy="158" r="14" fill="#F2B8C4" />
+    <circle cx="34" cy="154" r="7" fill="#D46A7E" />
+    <circle cx="48" cy="153" r="6" fill="#FCEEF0" />
+    <circle cx="42" cy="164" r="6" fill="#E692A3" />
+    <!-- Hair back -->
+    <ellipse cx="60" cy="64" rx="52" ry="52" fill="#3C2B27" />
+    <!-- Tiara -->
+    <path d="M38 22 L48 10 L60 18 L72 10 L82 22 Z" fill="#D9B382" />
+    <!-- Face -->
+    <circle cx="60" cy="72" r="43" fill="#FFE6D5" />
+    <!-- Hair bangs -->
+    <path d="M17 65 C22 28, 98 28, 103 65 C88 48, 72 45, 60 53 C48 45, 32 48, 17 65 Z" fill="#3C2B27" />
+    <!-- Eyes -->
+    <circle cx="45" cy="75" r="4.5" fill="#2B2626" />
+    <circle cx="75" cy="75" r="4.5" fill="#2B2626" />
+    <circle cx="43.5" cy="73.5" r="1.5" fill="#FFFFFF" />
+    <circle cx="73.5" cy="73.5" r="1.5" fill="#FFFFFF" />
+    <!-- Blush -->
+    <ellipse cx="36" cy="84" rx="6.5" ry="3.5" fill="#F4A5AE" opacity="0.7" />
+    <ellipse cx="84" cy="84" rx="6.5" ry="3.5" fill="#F4A5AE" opacity="0.7" />
+    <!-- Smile -->
+    <path d="M53 86 Q60 93 67 86" stroke="#9F3A4B" stroke-width="2.5" stroke-linecap="round" fill="none" />
+  </g>
+
+  <!-- Placeholder label pill -->
+  <rect x="155" y="458" width="290" height="36" rx="18" fill="#FFFFFF" fill-opacity="0.88" stroke="#D9B382" stroke-width="1.2" />
+  <text x="300" y="481" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#8C4A56" letter-spacing="1">
+    KHUNG ẢNH CHIBI CƯỚI (THAY ẢNH TẠI ĐÂY)
+  </text>
+</svg>

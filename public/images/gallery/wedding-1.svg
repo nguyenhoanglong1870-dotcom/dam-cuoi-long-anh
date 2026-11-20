@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" fill="none">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FDF2F4" />
+      <stop offset="100%" stop-color="#F2D3DA" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="800" fill="url(#g1)" />
+  <rect x="28" y="28" width="544" height="744" rx="16" stroke="#C69C6D" stroke-opacity="0.45" stroke-width="2" />
+  <circle cx="300" cy="340" r="90" fill="#FFFFFF" fill-opacity="0.65" />
+  <path d="M300 308 C288 290, 260 295, 260 320 C260 344, 300 374, 300 374 C300 374, 340 344, 340 320 C340 295, 312 290, 300 308Z" fill="#B55264" opacity="0.8" />
+  <text x="300" y="495" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#6E3540">Hoàng Long &amp; Ngọc Ánh</text>
+  <text x="300" y="535" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#9A6B74" letter-spacing="3">ALBUM ẢNH CƯỚI — 01</text>
+</svg>

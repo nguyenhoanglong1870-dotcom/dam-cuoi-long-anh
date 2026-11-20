@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FBF6EE" />
+      <stop offset="100%" stop-color="#EFE0CC" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#g2)" />
+  <rect x="28" y="28" width="744" height="544" rx="16" stroke="#C69C6D" stroke-opacity="0.5" stroke-width="2" />
+  <circle cx="375" cy="255" r="56" stroke="#C69C6D" stroke-width="4" fill="none" />
+  <circle cx="425" cy="255" r="56" stroke="#9F3A4B" stroke-width="4" fill="none" opacity="0.8" />
+  <text x="400" y="385" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#6E4A36">Nắng Thu Hà Nội</text>
+  <text x="400" y="425" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#9E7E66" letter-spacing="3">ALBUM ẢNH CƯỚI — 02</text>
+</svg>

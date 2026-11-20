@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="g6" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FDF4F5" />
+      <stop offset="100%" stop-color="#F5DFD6" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#g6)" />
+  <rect x="32" y="32" width="736" height="536" rx="18" stroke="#C69C6D" stroke-opacity="0.5" stroke-width="2" />
+  <text x="400" y="275" text-anchor="middle" font-family="Georgia, serif" font-size="36" fill="#8C3B4B">Save The Date</text>
+  <text x="400" y="330" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#B07E4F" letter-spacing="6">12 · 11 · 2026</text>
+  <text x="400" y="395" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#9C7178" letter-spacing="3">ALBUM ẢNH CƯỚI — 06</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" fill="none">
+  <defs>
+    <linearGradient id="g4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F9ECEF" />
+      <stop offset="100%" stop-color="#F2D7DC" />
+    </linearGradient>
+  </defs>
+  <rect width="700" height="700" fill="url(#g4)" />
+  <circle cx="350" cy="350" r="245" stroke="#B55264" stroke-opacity="0.3" stroke-width="2" stroke-dasharray="8 8" />
+  <circle cx="350" cy="350" r="220" stroke="#C69C6D" stroke-opacity="0.45" stroke-width="1.5" />
+  <text x="350" y="335" text-anchor="middle" font-family="Georgia, serif" font-size="30" fill="#7B303F">Lễ Ăn Hỏi</text>
+  <text x="350" y="385" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#9D626E" letter-spacing="3">ALBUM ẢNH CƯỚI — 04</text>
+</svg>

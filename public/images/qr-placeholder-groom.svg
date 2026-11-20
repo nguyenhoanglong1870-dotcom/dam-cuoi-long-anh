@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" fill="none">
+  <rect width="320" height="320" rx="20" fill="#FFFDFB" />
+  <rect x="12" y="12" width="296" height="296" rx="14" stroke="#C69C6D" stroke-width="1.5" stroke-dasharray="6 5" opacity="0.7" />
+  <!-- Stylized decorative QR finder squares -->
+  <rect x="44" y="44" width="60" height="60" rx="8" stroke="#9F3A4B" stroke-width="6" />
+  <rect x="60" y="60" width="28" height="28" rx="4" fill="#9F3A4B" />
+  <rect x="216" y="44" width="60" height="60" rx="8" stroke="#9F3A4B" stroke-width="6" />
+  <rect x="232" y="60" width="28" height="28" rx="4" fill="#9F3A4B" />
+  <rect x="44" y="216" width="60" height="60" rx="8" stroke="#9F3A4B" stroke-width="6" />
+  <rect x="60" y="232" width="28" height="28" rx="4" fill="#9F3A4B" />
+  <!-- Minimal center heart & placeholder text -->
+  <circle cx="160" cy="148" r="34" fill="#FCEEF0" stroke="#C69C6D" stroke-width="1.5" />
+  <path d="M160 138 C155 131, 144 133, 144 143 C144 152, 160 163, 160 163 C160 163, 176 152, 176 143 C176 133, 165 131, 160 138Z" fill="#9F3A4B" />
+  <text x="160" y="214" text-anchor="middle" font-family="Georgia, serif" font-size="15" font-weight="bold" fill="#5A343B">QR MỪNG CƯỚI</text>
+  <text x="160" y="236" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#8E6B72">CHÚ RỂ HOÀNG LONG</text>
+  <text x="160" y="264" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#B08962">(Thay ảnh QR ngân hàng tại đây)</text>
+</svg>

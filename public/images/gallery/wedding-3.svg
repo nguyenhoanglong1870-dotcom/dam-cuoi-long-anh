@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" fill="none">
+  <defs>
+    <linearGradient id="g3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FCEEF0" />
+      <stop offset="100%" stop-color="#F6E5D8" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="800" fill="url(#g3)" />
+  <path d="M120 740 L120 280 A200 200 0 0 1 520 280 L520 740 Z" stroke="#C69C6D" stroke-opacity="0.45" stroke-width="2" fill="#FFFFFF" fill-opacity="0.4" />
+  <text x="320" y="385" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#8C3B4B">H &amp; A</text>
+  <text x="320" y="435" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#7D585E">12 . 11 . 2026</text>
+  <text x="320" y="510" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#A0757D" letter-spacing="3">ALBUM ẢNH CƯỚI — 03</text>
+</svg>
