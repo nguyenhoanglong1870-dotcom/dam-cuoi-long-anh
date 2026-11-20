@@ -116,7 +116,8 @@ export const WEDDING_CONFIG = {
       venueName: "Sân Chơi Thôn Nhuế",
       address: "Thôn Nhuế, Kim Chung, Xã Thiên Lộc, Đông Anh, Hà Nội",
       note: "Đón khách từ 10:30, khai tiệc lúc 11:00. Sự hiện diện của quý vị là niềm vinh hạnh lớn của hai gia đình.",
-      mapsUrl: "https://maps.app.goo.gl/g8nvdsPrR9ZkhQKf6",
+      mapsUrl:
+        "https://www.google.com/maps?q=4QVM+862+C%C3%B4ng+vi%C3%AAn+Nhu%E1%BA%BF,+th%C3%B4n+Nhu%E1%BA%BF,+Thi%C3%AAn+L%E1%BB%99c,+H%C3%A0+N%E1%BB%99i&ftid=0x3135010010e4b7b3:0x71a33fa86102e9d8",
     },
   ] satisfies WeddingEvent[],
 
