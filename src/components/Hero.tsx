@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { CalendarHeart, ChevronDown, Heart, Sparkles } from "lucide-react";
 import { WEDDING_CONFIG } from "@/config/wedding";
-import FloatingPetals from "./FloatingPetals";
 import ScrollReveal from "./ScrollReveal";
 
 export default function Hero() {
@@ -19,9 +18,6 @@ export default function Hero() {
         aria-hidden="true"
         className="pointer-events-none absolute right-0 bottom-4 h-72 w-72 rounded-full bg-[#F5ECE1]/40 blur-3xl"
       />
-
-      {/* Floating Petals */}
-      <FloatingPetals />
 
       <div className="relative z-10 mx-auto flex w-full max-w-sm flex-col items-center text-center">
         {/* We Got Married Calligraphy */}

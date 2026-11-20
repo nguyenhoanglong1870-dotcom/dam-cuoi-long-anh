@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import OpeningCover from "@/components/OpeningCover";
 import FloatingToolbar from "@/components/FloatingToolbar";
+import FloatingPetals from "@/components/FloatingPetals";
 import DesktopQrCompanion from "@/components/DesktopQrCompanion";
 import Hero from "@/components/Hero";
 import WeddingCalendar from "@/components/Calendar";
@@ -124,6 +125,9 @@ export default function HomePage() {
 
       {/* Centered Boutique Mobile Canvas (Chuẩn tỷ lệ vàng như ngaychungdoi.com) */}
       <main className="relative w-full max-w-[460px] min-h-screen bg-[#FCFBF8] shadow-[0_20px_80px_rgba(40,65,50,0.12)] border-x border-[#EAE5DC] overflow-x-hidden">
+        {/* Soft Falling Petals Ambient Drift */}
+        <FloatingPetals />
+
         {/* Section 1: Hero with Arch-Framed Chibi & Romantic Quote */}
         <Hero />
 
