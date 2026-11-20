@@ -63,10 +63,10 @@ export const WEDDING_CONFIG = {
   heroChibiImage: "/images/chibi-hero.jpg",
 
   /**
-   * Đường dẫn file nhạc nền: "Nổi Gió Lên" (Phan Như Thùy)
+   * Đường dẫn file nhạc nền: "Em Đồng Ý (I Do)" (Đức Phúc x 911)
    */
   musicSrc: "/music/wedding-song.mp3",
-  musicTitle: "Nổi Gió Lên — Phan Như Thùy",
+  musicTitle: "Em Đồng Ý (I Do) — Đức Phúc x 911",
 
   /** Lịch trình chi tiết ngày cưới (Timeline) */
   timeline: [
